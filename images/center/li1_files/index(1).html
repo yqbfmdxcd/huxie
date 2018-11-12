@@ -1,0 +1,30 @@
+
+<!-- saved from url=(0080)http://www.zol.com/index.php?c=Detail&a=GetZolEvaluation&goodsId=30682498&type=2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	
+	<title>视频</title>
+        <link href="./detail_v2(1).css" rel="stylesheet">
+    </head>
+    <body>
+        
+    <script src="./jquery-1.8.1.js.下载"></script>
+    <script>
+        $(function(){
+            var videoId = "";
+            var parentDoc = window.parent.document, // 获取父页面
+                picSelector = $('.g-tab-swith2', parentDoc), // 所有特定计算高度的按键
+                iFrameH = ''
+            picSelector.on('click', function(event) { // 获取iFrame的高度
+
+                event.preventDefault();
+                iFrameH = $(document).height();
+                $('iframe[name="iframePicMaterial2"]', parentDoc).attr('height', iFrameH+30)
+
+            });
+            
+            $('.else-video-item', parentDoc).show();
+            $('#video-list-'+videoId, parentDoc).hide();
+        })
+    </script>
+    
+</body></html>

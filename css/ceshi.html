@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+		.container{
+			height: 600px;
+			width: 300px;
+			min-width: 300px;
+			background: pink;
+		}
+	
+	</style>
+</head>
+<body>
+    <div class="container">
+
+	</div>
+	
+
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+	function pro(obj){
+		this.obj=obj
+		console.log(this.obj)
+		this.obj[0].onmousedown=this.down.bind(this);
+	}
+	pro.prototype.down=function(e){
+		console.log(this.obj,e)
+	}
+
+	new pro($(".container"))
+	
+</script>

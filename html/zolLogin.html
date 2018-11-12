@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/zolLogin.css">
+</head>
+<body>
+    <div id="zolLogin">
+        <div class="loginStage clearfix">
+            <div class="loginTitile">30秒快速注册，加入Z商城</div>
+            <form name="form1" id="login_form" method="POST" action="zol.php">
+                <div class="formbody">
+                    <ul>
+                        <li>用手机号注册</li>
+                        <li></li>
+                    </ul>
+                    <div class="loginnum clearfix">
+                        <div class="loginnum1 clearfix">
+                           <span><em>*</em>手机号：</span><input name="zolPhone" type="text"> <i class="right">正确</i><i class="wrong"></i>
+                           <div class="lj ">请输入手机号</div>
+                        </div>
+                        <div class="loginnum1 clearfix">
+                            <span><em>*</em>验证码：</span>
+                            <input name="zolChk" type="text">
+                            <p id="delete"></p><input type="button" value="刷新">
+                             <i class="right">正确</i><i class="wrong"></i>
+                            <div class="lj ">请输入验证码</div>
+                        </div>
+                        <div class="loginnum1 clearfix">
+                            <span><em>*</em>验证码：</span>
+                            <input name="zolChk2" type="text">
+                            <input type="button" value="获取短信验证码">
+                             <i class="right">正确</i><i class="wrong"></i>
+                            <div class="lj ">请填写手机号码，然后点击[获取验证码]</div>
+                        </div>
+                        <div class="loginnum1 clearfix">
+                            <span><em>*</em>密码：</span><input name="zolPass" type="password"> <i class="right">正确</i><i class="wrong"></i>
+                            <div class="lj ">6-16位字母和数字的组合，不可用特殊字符</div>
+                        </div>
+                        <div class="loginnum1 clearfix">
+                            <span><em>*</em>确认密码：</span><input name="zolPass1" type="password"> <i class="right">正确</i><i class="wrong"></i>
+                            <div class="lj ">再次输入密码</div>
+                        </div>
+                        <div class="zolchkbox clearfix">
+                            <input type="checkbox" ><span>同意</span><span>《商城用户协议》《隐私声明》</span>
+                        </div>
+                        <div class="zolsubmit clearfix">
+                            <input type="button" value="提交">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/zolLogin.js"></script>

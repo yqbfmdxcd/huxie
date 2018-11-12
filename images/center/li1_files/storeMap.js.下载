@@ -1,0 +1,175 @@
+
+;(function ($) {
+
+
+    var screenStore = {
+
+        options: {
+            mapExample: null
+        },
+        getData: function (provinceId, cityId, merchantId){
+            var _this = this,
+                data = '';
+        
+            if (provinceId == ''){
+                alert('请选择省份');
+                return ;
+            }else if (cityId == ''){
+                alert('请选择市区');
+                return ;
+            }else{
+                data = {
+                    provinceId: provinceId,
+                    cityId: cityId,
+                    merchantId: merchantId
+                };
+            }
+            var storesList = $('.map_store-list');
+            $.ajax({
+                url: '/index.php?c=Ajax_MerchantStore_TongChengGou_TcgMapList&a=GetMerchantList',
+                type: 'GET',
+                dataType: 'json',
+                data: data,
+                success: function (res) {
+                    if(res.flag){
+                        // 店铺展示
+                        _this.storesShow(res.data);
+                        _this.options.mapExample = _this._setMap(res.data);
+                    }else{
+                        storesList.html('');
+                    }
+                },
+                error: function (err) { 
+                }
+            });
+        },
+        // 店铺展示
+        storesShow: function (storesData){
+            var storesList = $('.map_store-list'),
+                str = '';
+            for (var i in storesData ){
+    
+                str += '<li class="item" dataX="'+ storesData[i].x +'" dataY="'+ storesData[i].y +'">\
+                            <span class="choose"></span>\
+                            <h5 class="map_store-name">'+ storesData[i].title +'</h5>\
+                            <p class="map_store-address">'+ storesData[i].address +'</p>\
+                            <p class="map_store-phone">'+ storesData[i].tel +'</p>\
+                        </li>';         
+            }
+            storesList.html(str);
+        },
+        _city: function (val){
+            var str = '<option value="">请选择</option>';
+            $.ajax({
+                url: '/index.php?c=Ajax_MerchantStore_TongChengGou_TcgMapList&a=GetCityList',
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                    provinceId: val
+                },
+                success: function (res) {
+                    
+                    if (res.status){
+                    
+                        var info = res.info;
+
+                        for (var i in info){
+                            str += '<option value="'+ info[i].cityId +'">'+ info[i].name +'</option>';
+                        }
+                    }
+                
+                    
+                    $('#city').html(str);
+                },
+                error: function (err) { 
+                }
+            });      
+        },
+        _setMap: function (ops){
+            // 初始化xy
+            for (var i in ops ){
+                var x= ops[i].x;
+                var y= ops[i].y;
+                break;
+            }
+            var map = new BMap.Map(mapPlat); // 创建百度地图实例
+            map.enableScrollWheelZoom(true);
+            map.centerAndZoom(new BMap.Point(x, y), 16);  // 初始化地图,设置中心点坐标和地图级别
+    
+            // 自定义函数 添加地图标识
+            function addMarker(point,tl){
+                var marker = new BMap.Marker(point);
+                var label = new BMap.Label(tl,{offset:new BMap.Size(25,-15)});
+                label.setStyle({
+                    color : "black",
+                    fontSize : "14px",
+                    height : "32px",
+                    lineHeight : "32px",
+                    padding:'0 8px 0',
+                    borderColor: '#fff',
+                    fontFamily:"微软雅黑"
+                });
+                marker.setLabel(label);
+                map.addOverlay(marker);		// 将标注添加到地图中
+                // marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+            }
+            for (var i in ops){   
+                var pt = new BMap.Point(ops[i].x, ops[i].y),
+                    tl = ops[i].title;
+                addMarker(pt,tl);           
+            }  
+            return map;
+            
+            
+        },
+    
+        events: function (){
+            var _this = this;
+            
+            // 选择省份
+            $('#province').on('change', function (){
+    
+                var val = $(this).val();
+                // 获取市
+                _this._city(val);
+    
+            });
+    
+            // 查询
+            $('#query').on('click', function (){
+    
+                var provinceId = $('#province').val() || 1,
+                    cityId = $('#city').val() || 480,
+                    merchantId = $('#merchantId').val() || '';
+                    
+                // 更新数据
+                _this.getData(provinceId, cityId, merchantId);
+    
+            });
+    
+            // 查看位置
+            $('.map_store-list').on('click', '.item', function (){
+    
+                var x = $(this).attr('dataX'),
+                    y = $(this).attr('dataY');
+                _this.options.mapExample.panTo(new BMap.Point(x,y));
+                $(this).addClass('cur').siblings().removeClass('cur');
+            });
+            
+    
+        },
+    
+        init: function (){
+            var merchantId = $('#merchantId').val() || '';
+            this.getData(1, 478, merchantId);   // 默认北京
+            this.events();
+    
+        }
+    
+    
+    };
+    screenStore.init();
+
+})(window.$ || window.jQuery);
+
+

@@ -1,0 +1,910 @@
+@charset "gb2312";
+/**
+ * store-decoration
+ * æ–°ç‰ˆ
+ */
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.pub-center-box {
+  width: 1000px;
+  margin: auto;
+}
+
+.pub-icon {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/zplus/z_shop_decorate.png) no-repeat;
+  cursor: pointer;
+}
+
+.store-promotion-data {
+  background: #ffe56e;
+  padding-left: 17px;
+}
+
+.derocation-ticket {
+  position: relative;
+  width: 230px;
+  height: 131px;
+  float: left;
+  margin: 12px 15px 12px auto;
+}
+
+.decoration-ticket-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 165px;
+  height: 131px;
+  color: #fff485;
+  font-family: Microsoft YaHei;
+  font-size: 14px;
+}
+.decoration-ticket-info .amount-info {
+  position: relative;
+  height: 50px;
+  width: 145px;
+  margin: 18px 0 20px 12px;
+}
+.decoration-ticket-info .unit, .decoration-ticket-info .amount, .decoration-ticket-info .name {
+  position: absolute;
+  bottom: 0;
+}
+.decoration-ticket-info .unit {
+  left: 0;
+  font-size: 23px;
+}
+.decoration-ticket-info .amount {
+  left: 12px;
+  width: 118px;
+  text-align: center;
+  margin-bottom: -13px;
+  font-size: 48px;
+  font-weight: bold;
+}
+.decoration-ticket-info .name {
+  right: 0;
+}
+.decoration-ticket-info .effective-date, .decoration-ticket-info .effective-condition {
+  text-align: center;
+}
+.decoration-ticket-info .decoration-line {
+  padding: 0 5px;
+}
+
+.btn-ticket-draw {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65px;
+  height: 131px;
+  text-decoration: none;
+  padding-top: 34px;
+}
+.btn-ticket-draw div {
+  color: #fff;
+  font: 22px/1.2 Microsoft YaHei;
+  font-weight: bold;
+  text-align: center;
+}
+
+.derocation-ticket.derocation-effective {
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/tcg/decoration-effective-ticket-bg.png) no-repeat;
+}
+.derocation-ticket.derocation-effective .btn-ticket-draw {
+  width: 65px;
+  height: 131px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/tcg/btn-decoration-effective.png) no-repeat;
+}
+
+.derocation-ticket.derocation-empty {
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/tcg/decoration-empty-ticket-bg.png) no-repeat;
+}
+
+.derocation-ticket.derocation-overdue {
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/tcg/decoration-overdue-ticket-bg.png) no-repeat;
+}
+.derocation-ticket.derocation-overdue .btn-ticket-draw {
+  width: 65px;
+  height: 131px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/tcg/btn-decoration-overdue.png) no-repeat;
+  padding-top: 25px;
+  cursor: default;
+}
+.derocation-ticket.derocation-overdue .decoration-ticket-info {
+  color: #fff;
+}
+
+.decoration-goods-item {
+  float: left;
+  border: 1px solid #eee;
+  font: 12px/1.5 Microsoft YaHei;
+  background-color: #fff;
+}
+.decoration-goods-item .goods-item-inner .pic-box{
+    text-align: center;
+}
+.store-decoration-main .decoration-goods-item img{
+    display:inline-block;
+    vertical-align: middle;
+}
+.decoration-goods-item .price {
+  color: #ff3333;
+}
+.decoration-goods-item .amount {
+  font-weight: bold;
+}
+.decoration-goods-item .btn-buy {
+  display: block;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #ff3333;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 3px;
+}
+.decoration-goods-item .btn-wait {
+  border: 1px solid #ff3333;
+  color: #ff3333;
+  background: #fff;
+}
+.decoration-goods-item .btn-disable {
+  background: #d7d7d7;
+}
+.decoration-goods-item .timer {
+  font-size: 14px;
+  text-align: center;
+}
+.decoration-goods-item .timer i {
+  font-style: normal;
+  color: #ff3333;
+}
+.decoration-goods-item .process {
+  font-size: 14px;
+  text-align: center;
+  color: #ff8585;
+}
+.decoration-goods-item .process strong {
+  font-size: 18px;
+}
+.decoration-goods-item .process-bar {
+  position: relative;
+  width: 93px;
+  height: 8px;
+  margin-top: 10px;
+  border: 1px solid #ff8585;
+  border-radius: 5px;
+}
+.decoration-goods-item .curent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #ff8585;
+  width: 15%;
+}
+.decoration-goods-item .goods-item-inner .pic-box {
+  float: right;
+}
+.decoration-goods-item .goods-item-inner .goods-extension {
+  float: left;
+}
+.decoration-goods-item .good-item-left-box {
+  float: left;
+}
+.decoration-goods-item .good-item-right-box {
+  float: right;
+}
+.decoration-goods-item .row-margin {
+  margin-top: 20px;
+}
+.decoration-goods-item .attention-rate {
+  font-size: 14px;
+  color: #999;
+}
+
+.decoration-ticket-placeholder {
+  background: #fff3e7;
+  color: #ff7f01;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px dashed #ff7f01;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.tag-reward {
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: normal;
+  color: #ff3333;
+  border: 1px solid #ff3333;
+}
+
+.goods-style-col2 {
+  width: 1020px;
+  margin-bottom: 20px;
+}
+.goods-style-col2 .decoration-goods-item {
+  width: 428px;
+  padding: 30px;
+  margin-right: 20px;
+}
+.goods-style-col2 .decoration-ticket-placeholder {
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+}
+.goods-style-col2 .goods-title {
+  height: 60px;
+  overflow-y: hidden;
+  font-size: 20px;
+}
+.goods-style-col2 .amount {
+  font-size: 28px;
+}
+.goods-style-col2 .unit {
+  font-size: 18px;
+}
+.goods-style-col2 .pic-box{
+    width: 260px;
+    height: 260px;
+    line-height: 260px;
+}
+.goods-style-col2 img {
+   width:260px;
+}
+.goods-style-col2 .timer label {
+  display: block;
+}
+
+.goods-style-col3, .goods-style-col4 {
+  width: 1020px;
+  margin-bottom: 20px;
+}
+.goods-style-col3 .decoration-goods-item, .goods-style-col4 .decoration-goods-item {
+  width: 278px;
+  padding: 20px;
+  margin-right: 20px;
+}
+.goods-style-col3 .decoration-ticket-placeholder, .goods-style-col4 .decoration-ticket-placeholder {
+  width: 82px;
+  height: 30px;
+  line-height: 30px;
+}
+.goods-style-col3 .goods-title, .goods-style-col4 .goods-title {
+  font-weight: normal;
+  font-size: 16px;
+  height:47px;
+  overflow:hidden;
+} 
+.goods-style-col3 .amount, .goods-style-col4 .amount {
+  font-size: 28px;
+}
+.goods-style-col3 .unit, .goods-style-col4 .unit {
+  font-size: 18px;
+}
+.goods-style-col3 .pic-box{
+    width: 280px;
+    height: 280px;
+    line-height: 280px;
+}
+.goods-style-col3 img {
+   width:280px;
+}
+.goods-style-col3 .goods-item-inner, .goods-style-col4 .goods-item-inner {
+  position: relative;
+  height: 38px;
+}
+.goods-style-col3 .price, .goods-style-col3 .tag-reward, .goods-style-col3 .decoration-ticket-placeholder, .goods-style-col4 .price, .goods-style-col4 .tag-reward, .goods-style-col4 .decoration-ticket-placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.goods-style-col3 .btn-buy, .goods-style-col3 .attention-rate, .goods-style-col4 .btn-buy, .goods-style-col4 .attention-rate {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.goods-style-col3 .process, .goods-style-col4 .process {
+  font-size: 12px;
+  color: #333;
+  text-align: left;
+}
+.goods-style-col3 .process strong, .goods-style-col4 .process strong {
+  font-size: 12px;
+  font-weight: normal;
+  color: #ff3333;
+}
+.goods-style-col3 .process-bar, .goods-style-col4 .process-bar {
+  display: inline-block;
+  border-color: #dedede;
+}
+.goods-style-col3 .curent-bar, .goods-style-col4 .curent-bar {
+  background: #dedede;
+}
+.goods-style-col3 .timer, .goods-style-col4 .timer {
+  text-align: left;
+}
+
+.goods-style-col4 .decoration-goods-item {
+  width: 207px;
+  padding: 13px;
+}
+.goods-style-col4 .goods-title {
+  font-size: 12px;
+}
+.goods-style-col4 .unit {
+  font-size: 14px;
+}
+.goods-style-col4 .amount {
+  font-size: 24px;
+  font-weight: normal;
+}
+.goods-style-col4 .btn-buy {
+  width: 92px;
+  height: 28px;
+  line-height: 28px;
+}
+.goods-style-col4 .row-margin {
+  margin-top: 14px;
+}
+.goods-style-col4 .goods-item-inner {
+  height: 30px;
+}
+.goods-style-col4 .attention-rate {
+  font-size: 12px;
+}
+.goods-style-col4 .pic-box{
+    width: 210px;
+    height: 210px;
+    line-height: 210px;
+}
+.goods-style-col4 img {
+  width: 210px;
+}
+
+.store-decoration-header {
+  font-family: Microsoft YaHei;
+}
+.store-decoration-header a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+.store-decoration-header .decoration-log {
+  position: relative;
+  float: left;
+  width: 112px;
+  height: 34px;
+  margin-top: 6px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/decorate-logo.png) no-repeat;
+}
+.store-decoration-header .page-navs-wraper a {
+  color: #fff;
+  padding: 0 20px;
+  font: 16px/33px Microsoft YaHei;
+}
+.store-decoration-header .decoration-navs {
+  float: left;
+  position: relative;
+  margin: 7px 0 0 30px;
+}
+.store-decoration-header .current {
+  background: #fff;
+}
+.store-decoration-header .current a {
+  color: #333;
+}
+.store-decoration-header .nav-item {
+  height: 40px;
+  float: left;
+  border-radius: 2px;
+}
+.store-decoration-header .store-navs {
+  position: relative;
+  margin-top: 6px;
+  float: right;
+}
+.store-decoration-header .store-navs .nav-item {
+  height: 34px;
+  margin: 0 3px;
+  background: #717579;
+}
+.store-decoration-header .store-navs a {
+  font-size: 14px;
+}
+.store-decoration-header .page-navs-wraper {
+  height: 46px;
+  background: #35383b;
+}
+.store-decoration-header .page-navs-info, .store-decoration-header .page-configure {
+  position: relative;
+}
+.store-decoration-header .layout-item, .store-decoration-header .view-item {
+  float: left;
+}
+.store-decoration-header .layout-item a {
+  padding-left: 22px;
+  line-height: 40px;
+  margin-right: 40px;
+}
+.store-decoration-header .layout-item .pub-icon {
+  top: 10px;
+}
+.store-decoration-header .layout-item .layout-icon {
+  background-position: -34px -27px;
+}
+.store-decoration-header .layout-item .bg-color-icon {
+  background-position: -36px -60px;
+}
+.store-decoration-header .layout-item:hover a {
+  color: #c00;
+}
+.store-decoration-header .layout-item:hover .layout-icon {
+  background-position: -34px -155px;
+}
+.store-decoration-header .layout-item:hover .bg-color-icon {
+  color: #c00;
+  background-position: -36px -184px;
+}
+.store-decoration-header .view-item a {
+  padding: 6px 10px;
+  background: #717579;
+  margin-left: 5px;
+  border-radius: 2px;
+}
+.store-decoration-header .view-item img {
+  padding-right: 5px;
+  width: 21px;
+  height: 11px;
+}
+.store-decoration-header .view-item .disabled {
+  background: #c4c4c4;
+}
+.store-decoration-header .layout-configure-navs {
+  position: absolute;
+  float: left;
+  left: 140px;
+}
+.store-decoration-header .page-view-navs {
+  position: relative;
+  margin-top: 10px;
+  float: right;
+}
+.store-decoration-header .page-configure-warper {
+  height: 40px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #d9d9d9;
+  -wekit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22);
+}
+.store-decoration-header .store-item {
+  float: left;
+  padding: 0 16px;
+  border-right: 1px solid #e6e6e6;
+}
+.store-decoration-header .zol {
+  padding: 0 5px;
+}
+.store-decoration-header .feature {
+  border-right: none;
+}
+.store-decoration-header .store-name a {
+  padding-right: 18px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/zplus/public-head.png) no-repeat;
+  background-position: 100% -386px;
+}
+.store-decoration-header .store-feature li {
+  float: left;
+}
+.store-decoration-header .feature-item {
+  color: #999;
+  font: 12px/24px arial;
+  text-align: center;
+  margin-right: 5px;
+}
+.store-decoration-header .feature-item .flat {
+  color: #c00;
+}
+.store-decoration-header .store-detail {
+  position: relative;
+  float: left;
+  margin: 26px auto 36px 0;
+}
+.store-decoration-header .input-search {
+  position: absolute;
+  right: 100%;
+  height: 34px;
+  width: 266px;
+  line-height: 34px;
+  text-indent: 1em;
+  border: 2px solid #c00;
+}
+.store-decoration-header .search-store, .store-decoration-header .search-mall {
+  font-size: 16px;
+  height: 38px;
+  width: 80px;
+  text-align: center;
+  line-height: 38px;
+}
+.store-decoration-header .search-store {
+  background: #c00;
+  color: #fff;
+  border: 1px solid #c00;
+}
+.store-decoration-header .search-mall {
+  border: 1px solid #ffd9d9;
+  background: #ffeded;
+  color: #c00;
+}
+.store-decoration-header .decoration-search-box {
+  float: right;
+  position: relative;
+  margin-top: 28px;
+}
+.store-decoration-header .store-header {
+  width: 1200px;
+  margin: auto;
+  border-bottom: 1px solid #d9d9d9;
+}
+.store-decoration-main{
+    margin-top: -18px;
+}
+.store-decoration-main img {
+  display: block;
+}
+.store-decoration-main .set-title {
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+  background-color: #717579;
+  color: #fff;
+  text-align: center;
+}
+.store-decoration-main .btn-delete-icon {
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/tcg/btn-cust-delete.png) no-repeat;
+}
+.store-decoration-main .set-box {
+  position: absolute;
+  right: 0;
+  padding: 13px;
+  background-color: #717579;
+  z-index: 100;
+}
+.store-decoration-main .set-box label {
+  color: #fff;
+  font-size: 14px;
+  padding: 0 5px;
+}
+.store-decoration-main .btn-set {
+  border-radius: 2px;
+  background: #fff;
+  padding: 5px 10px 5px 26px;
+}
+.store-decoration-main .set {
+  background-image: url("http://icon.zol-img.com.cn/newshop/merchantstore/tcg/decoration-set-icon.png");
+  background-position: 9px center;
+  background-repeat: no-repeat;
+}
+.store-decoration-main .btn-hide {
+  background-image: url("http://icon.zol-img.com.cn/newshop/merchantstore/tcg/decoration-hide-icon.png");
+  background-position: 9px center;
+  background-repeat: no-repeat;
+}
+.store-decoration-main .btn-show {
+  background-image: url("http://icon.zol-img.com.cn/newshop/merchantstore/tcg/decoration-show-icon.png");
+  background-position: 9px center;
+  background-repeat: no-repeat;
+}
+.store-decoration-main .btn-add {
+  background-image: url("http://icon.zol-img.com.cn/newshop/merchantstore/tcg/decoration-add-icon.png");
+  background-position: 9px center;
+  background-repeat: no-repeat;
+}
+.store-decoration-main a {
+  text-decoration: none;
+  font: 14px/1.5 Microsoft YaHei;
+  color: #333;
+}
+.store-decoration-main .top-container {
+  position: relative;
+}
+.store-decoration-main .navbar-item {
+  float: left;
+  margin-right: 10px;
+  line-height: 40px;
+  position: relative;
+}
+.store-decoration-main .navbar-item .icon-more {
+  padding-right: 30px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/zplus/z_bg.png) no-repeat;
+  background-position: 100% -103px;
+}
+.store-decoration-main .navbar-item a {
+  padding: 0 15px;
+  color: #fff;
+}
+.store-decoration-main .navbar-item:hover {
+  background: #ae0000;
+}
+.store-decoration-main .navbar-item:hover .category-pannel {
+  display: block;
+}
+.store-decoration-main .navbar-item:hover .icon-more {
+  background-position: 100% -139px;
+}
+.store-decoration-main .navbar-item:hover .list {
+  display: block;
+}
+.store-decoration-main .navbar-item .icon-delete {
+  right: -4px;
+  top: 5px;
+  background-position: -35px -246px;
+}
+.store-decoration-main .navbar-item .list {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+}
+.store-decoration-main .navbar-item .list a {
+  display: block;
+  background: #c00;
+  padding: 5px 15px;
+}
+.store-decoration-main .navbar-item .list a:hover {
+  background: #ae0000;
+}
+.store-decoration-main .navbars {
+  position: relative;
+  float: left;
+}
+.store-decoration-main .navbar-container {
+  position: relative;
+  height: 40px;
+  width: 1000px;
+  margin: auto;
+}
+.store-decoration-main .store-navbar {
+  width: 100%;
+  background: #c00;
+}
+.store-decoration-main .category-pannel {
+  display: none;
+  position: absolute;
+  top: 39px;
+  left: 0;
+  padding: 10px 15px 5px;
+  width: 562px;
+  border: 1px solid #ae0000;
+  background: #fff;
+  z-index: 10;
+  color: #ccc;
+}
+.store-decoration-main .category-pannel a {
+  font-size: 12px;
+  margin-right: 5px;
+  color: #333;
+  padding: 0;
+}
+.store-decoration-main .category-pannel a:hover {
+  color: #c00;
+  text-decoration: underline;
+}
+.store-decoration-main .category-pannel .name a {
+  margin-right: 0;
+  color: #999;
+}
+.store-decoration-main .edit-navbar-box {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.store-decoration-main .focus-container {
+  position: relative;
+}
+.store-decoration-main .store-focus-data img {
+  width: 100%;
+}
+.store-decoration-main .store-top-tip, .store-decoration-main .store-focus-tip, .store-decoration-main .store-promotion-tip, .store-decoration-main .store-banner-tip, .store-decoration-main .store-caption-tip, .store-decoration-main .store-goods-tip, .store-decoration-main .store-video-tip {
+  display: none;
+}
+.store-decoration-main .promotion-container {
+  position: relative;
+}
+.store-decoration-main .data-empty, .store-decoration-main .module-hide {
+  text-align: center;
+  color: #828282;
+}
+.store-decoration-main .data-empty .store-top-tip, .store-decoration-main .module-hide .store-top-tip {
+  display: block;
+  background: #eeeeee;
+  line-height: 120px;
+}
+.store-decoration-main .data-empty .store-focus-tip, .store-decoration-main .module-hide .store-focus-tip {
+  display: block;
+  background: #eeeeee;
+  line-height: 200px;
+}
+.store-decoration-main .data-empty .store-promotion-tip, .store-decoration-main .module-hide .store-promotion-tip {
+  display: block;
+  background: #eeeeee;
+  line-height: 200px;
+}
+.store-decoration-main .data-empty .store-banner-tip, .store-decoration-main .module-hide .store-banner-tip {
+  display: block;
+  background: #eeeeee;
+  line-height: 200px;
+}
+.store-decoration-main .data-empty .store-caption-tip, .store-decoration-main .module-hide .store-caption-tip {
+  display: block;
+  background: #eeeeee;
+  line-height: 80px;
+}
+.store-decoration-main .data-empty .store-goods-tip, .store-decoration-main .module-hide .store-goods-tip {
+  display: block;
+  background: #eeeeee;
+  line-height: 200px;
+}
+.store-decoration-main .data-empty .store-video-tip, .store-decoration-main .module-hide .store-video-tip {
+  display: block;
+  background: #eeeeee;
+  line-height: 200px;
+}
+.store-decoration-main .data-empty .store-top-data, .store-decoration-main .data-empty .store-focus-data, .store-decoration-main .data-empty .store-promotion-data, .store-decoration-main .data-empty .store-banner-data, .store-decoration-main .data-empty .caption-data, .store-decoration-main .data-empty .goods-items-data, .store-decoration-main .data-empty .store-video-data, .store-decoration-main .module-hide .store-top-data, .store-decoration-main .module-hide .store-focus-data, .store-decoration-main .module-hide .store-promotion-data, .store-decoration-main .module-hide .store-banner-data, .store-decoration-main .module-hide .caption-data, .store-decoration-main .module-hide .goods-items-data, .store-decoration-main .module-hide .store-video-data {
+  display: none;
+}
+.store-decoration-main .store-top, .store-decoration-main .store-focus, .store-decoration-main .store-banner, .store-decoration-main .store-promotion, .store-decoration-main .store-goods, .store-decoration-main .store-video {
+  height: auto;
+}
+.store-decoration-main .sort{
+    /*margin-top:18px;*/
+}
+.store-decoration-main .store-navbar + .sort, .store-decoration-main .store-promotion + .sort { margin-top: 0; }
+.store-decoration-main .banner-container {
+  position: relative;
+}
+.store-decoration-main .btn-add-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.store-decoration-main .btn-add-box .btn-set {
+  background-color: #e9e9e9;
+  border: 1px solid #c0c0c0;
+}
+.store-decoration-main .goods-caption {
+  position: relative;
+  border-bottom: 1px solid #b6b6b6;
+}
+.store-decoration-main .goods-items {
+  position: relative;
+}
+.store-decoration-main .video-container {
+  position: relative;
+}
+
+.shopping-steps {
+  margin-top: 80px;
+  padding: 0 0 1px;
+  border: 1px solid #e6e6e6;
+}
+.shopping-steps ul {
+  padding: 20px 0 8px;
+  overflow: hidden;
+  zoom: 1;
+}
+.shopping-steps li {
+  float: left;
+  position: relative;
+  zoom: 1;
+  margin: 0 10px 0 0;
+  padding: 0 55px 0 90px;
+  width: 104px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/zplus/z_bg.png) no-repeat;
+  background-position: 100% -602px;
+}
+.shopping-steps li i {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 44px;
+  height: 44px;
+  background: url(http://icon.zol-img.com.cn/newshop/merchantstore/zplus/z_bg.png) no-repeat;
+}
+.shopping-steps li .icon-step1 {
+  background-position: 0 -86px;
+}
+.shopping-steps li .icon-step2 {
+  background-position: -45px -86px;
+}
+.shopping-steps li .icon-step3 {
+  background-position: 0 -131px;
+}
+.shopping-steps li .icon-step4 {
+  background-position: -45px -131px;
+}
+.shopping-steps li .title {
+  font: bold 16px/22px "Microsoft YaHei";
+}
+.shopping-steps li span {
+  display: block;
+  padding: 3px 0 0;
+  font: 12px/18px arial;
+  color: #666;
+}
+.shopping-steps .last {
+  margin: 0;
+  padding: 0 0 0 90px;
+  background: none;
+}
+.shopping-steps .func {
+  height: 32px;
+  font: 12px/32px arial;
+  color: #ccc;
+  text-align: center;
+  background: #f7f7f7;
+}
+.shopping-steps .func a {
+  margin: 0 15px;
+  color: #666;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: auto;
+}
+.slider-nav__item { 
+    background: #ccc;
+}
+.slider-nav__item:hover {
+    background: #000;
+}
+.slider-nav__item--current {
+    background: #000;
+}
+
+
+/* µêÆÌµØÍ¼ */
+.map-moudle{padding: 45px 0 80px;background-color: #f8f8f8;}
+.map-moudle_tl{width: 1200px;height: 60px;margin: 0 auto;line-height: 60px;font-size: 30px;color: #333;font-weight: normal;}
+.map-region{width: 1168px;padding: 30px 0 30px 30px;margin: 0 auto;border: 1px solid #edeceb;background-color: #fff;}
+.map-hd_search{height: 36px;}
+.map_screen-select{width: 120px;height: 36px;margin-right: 15px;font-size: 16px;border:1px solid #a6a6a6;border-radius: 3px;-webkit-border-radius:3px;outline: 0 none;vertical-align: top;}
+.map-search_btn{display: inline-block;width: 86px;height: 36px;line-height: 36px;text-align: center;font-size: 16px;color: #fff;background-color: #cb0300;border-radius: 4px;-webkit-border-radius:4px;cursor: pointer;}
+.map-main{height: 378px;background-color: #fff;}
+.map-plat{float: left;width: 488px;height:378px;}
+.map-right_reg{margin-left: 518px;}
+.map_store-box{height: 342px;padding-right: 18px;overflow-y:auto;}
+.map_store-list .item{position: relative;padding:18px 0 18px 30px;border-bottom: 1px solid #e6e6e6;cursor: pointer;}
+.map_store-list .choose{position: absolute;left:0;top:50%;width: 19px;height: 19px;margin-top: -10px;background: url('http://icon.zol-img.com.cn/newshop/merchantstore/tcg/cur.png') no-repeat left top;}
+.map_store-list .item.cur .choose{background-position: left -21px;}
+.map_store-name{height: 28px;margin-bottom: 5px;line-height: 28px;font-size: 20px;color: #f03c30;font-weight: normal;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.map_store-address{height: 22px;margin-bottom: 3px;line-height: 22px;font-size:16px;color: #555;overflow: hidden;}
+.map_store-phone{height: 22px;line-height: 22px;font-size:16px;color: #555;overflow: hidden;}

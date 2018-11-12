@@ -1,0 +1,47 @@
+
+<!-- saved from url=(0080)http://www.zol.com/index.php?c=Detail&a=GetZolEvaluation&goodsId=30682498&type=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	
+	<title>评测文章</title>
+        <link href="./detail_v2(1).css" rel="stylesheet">
+    </head>
+    <body id="doc1">
+        
+            <script src="./jquery-1.8.1.js.下载"></script>
+    <script>
+        
+    $(function(){
+        var articleId = "";
+        var parentDoc1 = window.parent.document, // 获取父页面
+            picSelector1 = $('.g-tab-swith', parentDoc1), // 所有特定计算高度的按键
+             picSelector11 = $('.g-tab-swith11', parentDoc1), // 所有特定计算高度的按键
+            iFrameH = '',
+            picSelector = $('.g-tab-swith3', parentDoc1);
+
+            picSelector11.on('click', function(event) { // 获取iFrame的高度
+                iFrameH =$('#doc1 .article-detail').outerHeight();
+                $('iframe[name="iframePicMaterial1"]', parentDoc1).attr('height', iFrameH)
+            });
+
+            picSelector1.on('click.aaa', function(event) { // 获取iFrame的高度
+                iFrameH =$('#doc1 .article-detail').outerHeight();
+                
+                setTimeout(function(){
+                    $('iframe[name="iframePicMaterial1"]', parentDoc1).attr('height', iFrameH)
+                }, 50)
+                iFrameH =$('#doc1 .article-detail').outerHeight(true);
+                $('iframe[name="iframePicMaterial1"]', parentDoc1).attr('height', iFrameH)
+                $('.js_zs-comment', parentDoc1).eq(1).hide()
+            });
+            picSelector1.trigger('click.aaa')
+
+            $('.else-essay-item', parentDoc1).show();
+            $('#article-list-'+articleId, parentDoc1).hide();
+            var parentTop = $('.evaluating-btn-item', parentDoc1).offset().top
+            $(parentDoc1).scrollTop(parentTop)
+
+    })
+    </script>
+    
+
+</body></html>

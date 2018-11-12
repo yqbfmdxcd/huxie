@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			img{
+				position:absolute;
+				/* display: none; */
+			}
+			.box div{
+				width:200px;
+				height:200px;
+				position:absolute;
+			}
+			.box{
+				width:200px;
+				height:200px;
+				position: relative;
+			}
+			.sl .slide{
+				width:40px;
+				height:10px;
+				float: left;
+				margin-left: 20px;
+				opacity: 0.5;
+			}
+			.sl2{
+				background: skyblue
+			}
+			.sl3{
+				background: pink
+			}
+			.active{
+				opacity: 0.9;
+			}
+			.sl{
+				position: absolute;
+				bottom:20px;
+				z-index: 100;
+			}
+			.stage{
+				position: relative;
+			}
+			.ss{
+				background: blue!important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="stage">
+			<div class="box">
+				<div style="background: skyblue"></div>
+				<div style="background: pink"></div>
+				<div style="background: yellowgreen"></div>
+			</div>
+			<div class="sl">
+				<div class="slide"></div>
+				<div class="slide sl2"></div>
+				<div class="slide sl3"></div>
+			</div>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.3.js">
+	
+</script>
+<script type="text/javascript">
+	var index = 0;
+	 $(".box div").eq(0).fadeIn().siblings("div").fadeOut();
+	 $(".sl div").eq(0).addClass("active")
+	function lb(){
+		function lunbo(){
+			index++;
+			$(".box div").eq(index).fadeIn().siblings(".box div").fadeOut(2000);
+			$(".sl div").eq(index).addClass("active").siblings(".sl div").removeClass("active")
+			if(index==2){
+				index = -1;
+			};
+		}
+	var timer = setInterval(lunbo,3000);
+	$(".stage").mouseenter(function(){
+		console.log(timer)
+		clearInterval(timer)
+	})
+	$(".stage").mouseleave(function(){
+		clearInterval(timer)
+		timer=setInterval(lunbo,3000)
+	})
+	for(var i=0;i<$(".sl div").length;i++){
+		$(".sl div")[i].index = i;
+					$($(".sl div")[i]).click(function(){
+						index = this.index;
+						for(var i = 0 ; i < $(".sl div").length; i ++){
+							// $(".sl div")[i].className = 'ss';
+						}
+						$(".sl div").eq(index).addClass("active").siblings(".sl div").removeClass("active")
+						$(".box div").eq(index).fadeIn().siblings(".box div").fadeOut(2000);
+					});
+				}
+	$(".sl").delegate($(".sl div"),"click",function(){
+		
+	})
+	}
+	lb();
+</script>

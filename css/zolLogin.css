@@ -1,0 +1,154 @@
+@charset"utf-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,figure { margin:0; padding:0; }
+a,u{text-decoration:none;}
+b,strong{font-weight:100;}
+ul,li,ol{
+	list-style: none;
+}
+i,em{font-style:normal;}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:100;}
+img{display:block;border:0;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
+
+#zolLogin{
+    width:100%;
+    height:100%;
+}
+.loginStage{
+    padding: 0 0 100px;
+    border: 1px solid #e6e6e6;
+    width: 980px;
+    margin:0 auto;
+}
+.loginTitile{
+    width:890px;
+    height:28px;
+    padding: 16px 0 16px 90px;
+    background: #fafafa;
+    font: 18px/28px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+    color: #999;
+}
+#login_form{
+    width:980px;
+}
+.formbody{
+    float: left;
+    padding: 30px 0 0 89px;
+    width: 500px;
+}
+.formbody>ul{
+    width:500px;
+    height:39px;
+}
+.formbody>ul>li{
+    float: left;
+    width:248px;
+    height:38px;
+    line-height: 39px;
+    color:red;
+    text-align: center;
+    border:1px solid #ccc;
+    border-bottom:none;
+}
+.formbody>ul>li:nth-child(2){
+   border:none;
+   border-bottom:1px solid #ccc;
+}
+.loginnum{
+    width:500px;
+    height:500px;
+    padding-top:30px;
+}
+.loginnum1{
+    --position: relative;
+    width:500px;
+    height:40px;
+}
+.lj{
+    width:400px;
+    height:42px;
+    float: left;
+    font-size:14px;
+    color:#ccc;
+    padding-left:83px;
+    line-height:24px;
+}
+.loginnum1>span{
+    float:left;
+    width:83px;
+    font-size:16px;
+    height:40px;
+    line-height: 40px;
+    display: block;
+    text-align: right;
+    white-space: nowrap;
+}
+.loginnum1>span>em{
+  color:red;
+}
+.loginnum1>input:nth-of-type(1){
+    float: left;
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 8px 5px;
+    width: 278px;
+    height: 22px;
+    border: 1px solid #ccc;
+}
+.loginnum1>p{
+    float: left;
+    text-align: center;
+    width:60px;
+    height:38px;
+    line-height:40px;
+    border:1px solid #ccc;
+}
+.loginnum1>input:nth-of-type(2){
+    float: left;
+    height:40px;
+    line-height:40px;
+    margin-left:10px;
+    border:none;
+    background:none;
+    color:blue;
+}
+.loginnum1>i{
+    float: left;
+    display: none;
+  height:40px;
+  line-height:40px;
+  }
+  .zolchkbox{
+    width:500px;
+    height:40px;
+  }
+  .zolchkbox>input{
+      float: left;
+      margin-left:83px;
+  }
+  .zolchkbox>span{
+      display: block;
+      float:left;
+      font-size:13px;
+  }
+  .zolchkbox>span:nth-of-type(1){
+      color:#ccc;
+  }
+  .zolsubmit{
+      width:500px;
+      height:40px;
+  }
+  .zolsubmit>input{
+    display: block;
+    margin: 20px 0 ;
+    width: 290px;
+    height: 40px;
+    font: bold 14px/40px "Arial";
+    color: #fff;
+    background:red;
+    text-align: center;
+    float: left;
+   
+    cursor: pointer;
+  }

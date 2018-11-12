@@ -1,0 +1,140 @@
+@charset"utf-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,figure { margin:0; padding:0; }
+a,u{text-decoration:none;}
+b,strong{font-weight:100;}
+ul,li,ol{
+	list-style: none;
+}
+i,em{font-style:normal;}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:100;}
+img{display:block;border:0;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
+
+
+/* 一楼 */
+.center1L{
+    width:1200px;
+    height:32px;
+    margin: 0 auto;
+    line-height: 32px;
+}
+.center1L>a{
+    margin-right:10px;
+    margin-left:10px;
+    color: black;
+}
+.center2L{
+    width:1198px;
+    height:918px;
+    margin: 0 auto;
+   border:1px solid #ccc;
+}
+.center2LL{
+    float:left;
+    width: 1000px;
+    height:918px;
+}
+    /* }图片 */
+.zoFocus{
+    width:400px;
+    height:552px;
+    padding-top:10px;
+    margin-left:20px;
+    float: left;
+}
+.zoFocusfd{
+    width:400px;
+    height:400px;
+}
+.zoFocusfd>img{
+    
+    margin-bottom:10px;
+}
+.zoFocusList{
+    width:400px;
+    height:70px;
+    overflow: hidden;
+}
+.zoFocusList>ul{
+    width:412px;
+    height:70px;
+    
+}
+.zoFocusList>ul>li{
+    width:70px;
+    height:70px;
+    margin-right:12px;
+    float: left;
+}
+
+/* youce */
+.center2LR{
+    float: right;
+    padding: 10px 20px 0 0;
+    width: 530px;
+    height:908px;
+    background:pink;
+}
+.center2LR>h3{
+    padding: 7px 0 0;
+    display: block;
+    margin-bottom: 10px;
+    font: 16px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.center2LR>h3>span:nth-of-type(1){
+    display: block;
+    color: #999;
+    font-size: 14px;
+}
+.centerPrice{
+    width: 530px;
+    height:135px;
+    padding: 5px 10px;
+    background: #f7f7f7;
+}
+.centerPrice>dl{
+    width:510px;
+    height:30px;
+}
+.centerPrice>dl>dt{
+    text-align: justify;
+    float: left;
+    width:65px;
+    height:30px;
+}
+.centerPrice>dl>dt>span{ 
+    display:inline-block;
+    padding-left:100%; 
+}
+.centerPrice>dl>dd{
+    float: left;
+    color: red;
+    padding: 0 0 0 5px;
+    font-family: tahoma;
+    font-size: 30px;
+    font-weight: bold;
+}
+.centerPrice>dl>dd>i{
+    font-size:16px;
+}
+.centerPrice>dl:nth-child(2){
+    height:56px;
+    margin:5px 0;
+}
+
+.zoFocusfd{
+    position: relative;
+}
+.zoFocusfd>div:nth-of-type(1){
+    width:400px;
+    height:400px;
+    position: absolute;
+    background:skyblue;
+   display: none;
+   overflow: hidden;
+   top:0px;
+   left:400px;
+   
+
+}
